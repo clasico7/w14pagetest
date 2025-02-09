@@ -1,87 +1,21 @@
 ---
+title: Servicios
+layout: default
+---
+---
 import SectionTitle from "../ui/SectionTitle.astro";
-import TeamCard from "../ui/TeamCard.astro";
+import SwiperSlider from "../ui/SwiperSlider.astro";
 import Section from "./Section.astro";
-
-const description =
-  "Meet the skilled and experienced team behind our successful digital marketing strategies";
-
-// Importa la imagen una sola vez
-import profilePic from "../../assets/pics/profile-pic.png";
-
-const team = [
-  {
-    pic: profilePic,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: profilePic,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: profilePic,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: profilePic,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: profilePic,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: profilePic,
-    name: "Maria Katz",
-    role: "CEO",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-];
 ---
 
-<Section id="about">
-  <div class="mt-[140px]">
-    <SectionTitle sectionTitle="Team" description={description} />
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-2 gap-10"
-    >
-      {
-        team.map((member, index) => (
-          <TeamCard
-            key={index}
-            pic={member.pic}
-            name={member.name}
-            role={member.role}
-            description={member.description}
-            link={member.link}
-          />
-        ))
-      }
-    </div>
-    <div class="flex justify-end mt-10">
-      <button class="btn-primary">See all team</button>
+<Section id="Servicio">
+  <div class="mt-20">
+    <SectionTitle
+      sectionTitle="Servicios"
+      description="Los servicios que ofrecemos son los siguientes:"
+    />
+    <div class="rounded-[45px] bg-dark mb-[150px] text-white">
+      <SwiperSlider />
     </div>
   </div>
 </Section>
